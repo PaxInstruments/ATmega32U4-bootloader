@@ -1,11 +1,9 @@
-This folder contains support for SparkFun's 32u4 based
-Arduino-compatible development boards:
-ProMicro 5V
-ProMicro 3.3V
-WiFlyin'
-LilyPadUSB
-Minibench
-MakeyMakey
+This folder contains support for Blinkiverse's 32u4 based
+Arduino-compatible boards:
+AnalogLEDFader
+UsbDmx
+Blinkyboard
+Blinkyboard8
 
 To add support for these boards to your Arduino IDE, simply
 copy this folder into your hardware directory in one of two
