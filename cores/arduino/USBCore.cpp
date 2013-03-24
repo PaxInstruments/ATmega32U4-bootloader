@@ -51,19 +51,25 @@ const u16 STRING_LANGUAGE[2] = {
 
 const u16 STRING_IPRODUCT[17] = {
 	(3<<8) | (2+2*16),
-#if USB_PID == 0x8036	
-	'A','r','d','u','i','n','o',' ','L','e','o','n','a','r','d','o'
+#if USB_PID == 0x605E
+	'A','n','a','l','o','g',' ','L','E','D',' ','F','a','d','e','r'
+#elif USB_PID == 0x6666
+	'U','S','B',' ','D','M','X',' ',' ',' ',' ',' ',' ',' ',' ',' '
+#elif USB_PID == 0x6667
+	'B','l','i','n','k','y','b','o','a','r','d',' ',' ',' ',' ',' '
+#elif USB_PID == 0x6668
+	'B','l','i','n','k','y','b','o','a','r','d','8',' ',' ',' ',' '
 #else
 	'U','S','B',' ','I','O',' ','B','o','a','r','d',' ',' ',' ',' '
 #endif
 };
 
-const u16 STRING_IMANUFACTURER[12] = {
-	(3<<8) | (2+2*11),
-#if USB_VID == 0x2341
-	'A','r','d','u','i','n','o',' ','L','L','C'
+const u16 STRING_IMANUFACTURER[17] = {
+	(3<<8) | (2+2*16),
+#if USB_VID == 0x1D50
+	'B','l','i','n','k','i','v','e','r','s','e',',',' ','L','L','C'
 #else
-	'U','n','k','n','o','w','n',' ',' ',' ',' '
+	'U','n','k','n','o','w','n',' ',' ',' ',' ',' ',' ',' ',' ',' '
 #endif
 };
 

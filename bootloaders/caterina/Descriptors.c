@@ -196,7 +196,11 @@ const USB_Descriptor_String_t ProductString =
 	#if DEVICE_PID == 0x605E
 	.UnicodeString         		= L"Analog LED Fader"
 	#elif DEVICE_PID == 0x6666
-	.UnicodeString         		= L"USB DMX"
+	.UnicodeString         		= L"USB DMX         "
+	#elif DEVICE_PID == 0x6667
+	.UnicodeString         		= L"Blinkyboard     "
+	#elif DEVICE_PID == 0x6668
+	.UnicodeString         		= L"Blinkyboard8    "
 	#else
 	.UnicodeString			= L"USB IO board    "
 	#endif
@@ -204,12 +208,12 @@ const USB_Descriptor_String_t ProductString =
 
 const USB_Descriptor_String_t ManufNameString = 
 {
-	.Header					= {.Size = USB_STRING_LEN(15), .Type = DTYPE_String},
+	.Header					= {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
 	
 	#if DEVICE_VID == 0x1D50
-	.UnicodeString			= L"Blinkiverse LLC"
+	.UnicodeString			= L"Blinkiverse, LLC"
 	#else
-	.UnicodeString			= L"Unknown        "
+	.UnicodeString			= L"Unknown         "
 	#endif
 };
 
