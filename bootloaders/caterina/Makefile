@@ -49,7 +49,6 @@
 # USB vendor ID (VID)
 # official Arduino LLC VID = 0x2341
 # SparkFun VID = 0x1B4F
-VID = 0x1B4F
 
 # USB product ID (PID)
 # official Leonardo PID = 0x0036
@@ -58,7 +57,6 @@ VID = 0x1B4F
 # SparkFun Pro Micro 5V PID = 0x9205
 # "                " 3.3V PID = 0x9203
 # MaKey MaKey PID = 0x2B74
-PID = 0x9205
 
 # MCU name
 MCU = atmega32u4

@@ -1,3 +1,4 @@
-Remove sparkfun stuff from cords boards drivers variants.
-Fix LED defines for USB-DMX and Analog LED Fader
-
+x-Remove sparkfun stuff from cords boards drivers variants.
+-Fix LED defines for USB-DMX and Analog LED Fader
+-Add factory hex files for board programming
+-Test .inf files on windows

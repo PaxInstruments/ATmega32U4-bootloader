@@ -86,24 +86,10 @@ ServiceBinary=%12%\%DRIVERFILENAME%.sys
 [SourceDisksFiles]
 [SourceDisksNames]
 [DeviceList]
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9205
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9206&MI_00
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9203
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9204&MI_00
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0002
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0002&MI_00
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0003
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0003&MI_00
+%DESCRIPTION%=DriverInstall, USB\VID_1D50&PID_605E
 
 [DeviceList.NTamd64]
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9205
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9206&MI_00
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9203
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_9204&MI_00
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0002
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0002&MI_00
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0003
-%DESCRIPTION%=DriverInstall, USB\VID_1B4F&PID_0003&MI_00
+%DESCRIPTION%=DriverInstall, USB\VID_1D50&PID_605E
 
 ;------------------------------------------------------------------------------
 ;  String Definitions
@@ -113,7 +99,7 @@ ServiceBinary=%12%\%DRIVERFILENAME%.sys
 [Strings]
 MFGFILENAME="CDC_vista"
 DRIVERFILENAME ="usbser"
-MFGNAME="SparkFun Electronics"
-INSTDISK="SparkFun Pro Micro Driver Installer"
-DESCRIPTION="SparkFun Pro Micro"
+MFGNAME="Blinkiverse, LLC"
+INSTDISK="Blinkiverse, LLC Analog LED Fader Driver Installer"
+DESCRIPTION="Blinkiverse Analog LED Fader"
 SERVICE="USB RS-232 Emulation Driver"
