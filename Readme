@@ -16,3 +16,9 @@ or later!!!
 
 Information on compiling and programming the bootloader can be
 found in the bootloader directory.
+
+
+This is based on SparkFun's board support system:
+https://github.com/blinkiverse/Blinkiverse32u4_boards
+
+Which is in turn based on Arduino and LUFA. Thanks to everyone for being awesome!
