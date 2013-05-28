@@ -1,4 +1,4 @@
-x-Remove sparkfun stuff from cords boards drivers variants.
--Fix LED defines for USB-DMX and Analog LED Fader
--Add factory hex files for board programming
+-Fix LED defines for USB-DMX, Analog LED Fader, Blinkyboard, Blinkyboard8
+-Add device function hex files for board programming
 -Test .inf files on windows
+-Get real PIDs for USBDMX, Blinkyboard8
