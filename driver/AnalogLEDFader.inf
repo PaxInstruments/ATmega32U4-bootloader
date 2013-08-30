@@ -99,7 +99,7 @@ ServiceBinary=%12%\%DRIVERFILENAME%.sys
 [Strings]
 MFGFILENAME="CDC_vista"
 DRIVERFILENAME ="usbser"
-MFGNAME="Blinkiverse, LLC"
-INSTDISK="Blinkiverse, LLC Analog LED Fader Driver Installer"
-DESCRIPTION="Blinkiverse Analog LED Fader"
+MFGNAME="BlinkyTape"
+INSTDISK="Analog LED Fader Driver Installer"
+DESCRIPTION="Analog LED Fader"
 SERVICE="USB RS-232 Emulation Driver"

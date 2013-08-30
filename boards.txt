@@ -1,6 +1,6 @@
 ##############################################################
 
-AnalogLEDFader.name=Blinkiverse Analog LED Fader
+AnalogLEDFader.name=Analog LED Fader
 AnalogLEDFader.upload.protocol=avr109
 AnalogLEDFader.upload.maximum_size=28672
 AnalogLEDFader.upload.speed=57600
@@ -21,7 +21,7 @@ AnalogLEDFader.build.variant=leonardo
 
 ##############################################################
 
-USBDMX.name=Blinkiverse USB DMX converter
+USBDMX.name=USB DMX converter
 USBDMX.upload.protocol=avr109
 USBDMX.upload.maximum_size=28672
 USBDMX.upload.speed=57600
@@ -42,7 +42,7 @@ USBDMX.build.variant=leonardo
 
 ##############################################################
 
-BlinkyTape.name=Blinkiverse BlinkyTape
+BlinkyTape.name=BlinkyTape
 BlinkyTape.upload.protocol=avr109
 BlinkyTape.upload.maximum_size=28672
 BlinkyTape.upload.speed=57600
@@ -60,28 +60,6 @@ BlinkyTape.build.vid=0x1D50
 BlinkyTape.build.pid=0x606C
 BlinkyTape.build.core=arduino
 BlinkyTape.build.variant=leonardo
-
-##############################################################
-
-
-Blinkyboard8.name=Blinkiverse Blinkyboard8
-Blinkyboard8.upload.protocol=avr109
-Blinkyboard8.upload.maximum_size=28672
-Blinkyboard8.upload.speed=57600
-Blinkyboard8.upload.disable_flushing=true
-Blinkyboard8.bootloader.low_fuses=0xff
-Blinkyboard8.bootloader.high_fuses=0xd8
-Blinkyboard8.bootloader.extended_fuses=0xcb
-Blinkyboard8.bootloader.path=caterina
-Blinkyboard8.bootloader.file=Caterina-Blinkyboard8.hex
-Blinkyboard8.bootloader.unlock_bits=0x3F
-Blinkyboard8.bootloader.lock_bits=0x2F
-Blinkyboard8.build.mcu=atmega32u4
-Blinkyboard8.build.f_cpu=16000000L
-Blinkyboard8.build.vid=0x1D50
-Blinkyboard8.build.pid=0x6668
-Blinkyboard8.build.core=arduino
-Blinkyboard8.build.variant=leonardo
 
 ##############################################################
 
