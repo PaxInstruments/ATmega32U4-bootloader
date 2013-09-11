@@ -193,25 +193,25 @@ const USB_Descriptor_String_t ProductString =
 {
 	.Header                 = {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
 
-	#if DEVICE_PID == 0x605E
-	.UnicodeString         		= L"Analog LED Fader"
-	#elif DEVICE_PID == 0x6666
-	.UnicodeString         		= L"USB DMX         "
-	#elif DEVICE_PID == 0x606C
-	.UnicodeString         		= L"BlinkyTape      "
-	#else
-	.UnicodeString			= L"USB IO board    "
-	#endif
+       #if DEVICE_PID == 0x605E
+       .UnicodeString                   = L"Analog LED Fader"
+       #elif DEVICE_PID == 0x6666
+       .UnicodeString                   = L"USB DMX         "
+       #elif DEVICE_PID == 0x606C
+       .UnicodeString                   = L"BlinkyTape      "
+       #else
+       .UnicodeString                   = L"USB IO board    "
+       #endif
 };
 
 const USB_Descriptor_String_t ManufNameString = 
 {
-	.Header					= {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
+	.Header					= {.Size = USB_STRING_LEN(11), .Type = DTYPE_String},
 	
-	#if DEVICE_VID == 0x1D50
-	.UnicodeString			= L"BlinkyTape      "
+        #if DEVICE_VID == 0x1D50
+        .UnicodeString                  = L"BlinkyTape "
 	#else
-	.UnicodeString			= L"Unknown         "
+	.UnicodeString			= L"Unknown    "
 	#endif
 };
 

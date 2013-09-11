@@ -47,16 +47,18 @@
 #----------------------------------------------------------------------------
 
 # USB vendor ID (VID)
-# official Arduino LLC VID = 0x2341
-# SparkFun VID = 0x1B4F
+# reuse of this VID by others is forbidden by USB-IF
+# official Arduino LLC VID
+# VID = 0x2341
+
 
 # USB product ID (PID)
-# official Leonardo PID = 0x0036
-# SparkFun WiFlyin' PID = 0x9209
-# SparkFun LilyPadUSB PID = 0x9207
-# SparkFun Pro Micro 5V PID = 0x9205
-# "                " 3.3V PID = 0x9203
-# MaKey MaKey PID = 0x2B74
+# official Leonardo PID
+# PID = 0x0036
+# official Micro PID
+# PID = 0x0037
+# official Esplora PID
+# PID = 0x003C
 
 # MCU name
 MCU = atmega32u4
@@ -125,9 +127,8 @@ OBJDIR = .
 
 
 # Path to the LUFA library
-#LUFA_PATH = //LUFA/LUFA-111009
-#LUFA_PATH = ../../../../../../../../../../../../../../../../../../../../../LUFA/LUFA-111009
-LUFA_PATH = LUFA-111009
+#LUFA_PATH = ../../../../../../LUFA/LUFA-111009
+LUFA_PATH = ./LUFA-111009
 
 
 # LUFA library compile-time options and predefined tokens
@@ -385,7 +386,7 @@ AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 
 # Uncomment the following if you do /not/ wish a verification to be
 # performed after programming the device.
-AVRDUDE_NO_VERIFY = -V
+#AVRDUDE_NO_VERIFY = -V
 
 # Increase verbosity level.  Please use this when submitting bug
 # reports about avrdude. See <http://savannah.nongnu.org/projects/avrdude>
@@ -439,8 +440,7 @@ OBJDUMP = avr-objdump
 SIZE = avr-size
 AR = avr-ar rcs
 NM = avr-nm
-#AVRDUDE = /Applications/avrdude -C /Applications/avrdude.conf -B 1
-AVRDUDE = avrdude -C "C:/WinAVR-20100110/bin/avrdude.conf" -B 1
+AVRDUDE = /Applications/avrdude -C /Applications/avrdude.conf -B 1
 REMOVE = rm -f
 REMOVEDIR = rm -rf
 COPY = cp
