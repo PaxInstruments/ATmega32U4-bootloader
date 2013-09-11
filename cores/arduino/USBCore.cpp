@@ -52,22 +52,22 @@ const u16 STRING_LANGUAGE[2] = {
 const u16 STRING_IPRODUCT[17] = {
 	(3<<8) | (2+2*16),
 #if USB_PID == 0x605E
-	'A','n','a','l','o','g',' ','L','E','D',' ','F','a','d','e','r'
+       'A','n','a','l','o','g',' ','L','E','D',' ','F','a','d','e','r'
 #elif USB_PID == 0x6666
-	'U','S','B',' ','D','M','X',' ',' ',' ',' ',' ',' ',' ',' ',' '
+       'U','S','B',' ','D','M','X',' ',' ',' ',' ',' ',' ',' ',' ',' '
 #elif USB_PID == 0x606C
-	'B','l','i','n','k','y','T','a','p','e',' ',' ',' ',' ',' ',' '
+       'B','l','i','n','k','y','T','a','p','e',' ',' ',' ',' ',' ',' '
 #else
 	'U','S','B',' ','I','O',' ','B','o','a','r','d',' ',' ',' ',' '
 #endif
 };
 
-const u16 STRING_IMANUFACTURER[17] = {
-	(3<<8) | (2+2*16),
+const u16 STRING_IMANUFACTURER[12] = {
+	(3<<8) | (2+2*11),
 #if USB_VID == 0x1D50
-	'B','l','i','n','k','y','T','a','p','e',' ',' ',' ',' ',' ',' '
+	'B','l','i','n','k','y','T','a','p','e',' '
 #else
-	'U','n','k','n','o','w','n',' ',' ',' ',' ',' ',' ',' ',' ',' '
+	'U','n','k','n','o','w','n',' ',' ',' ',' '
 #endif
 };
 
@@ -607,7 +607,7 @@ ISR(USB_GEN_vect)
 	{
 #ifdef CDC_ENABLED
 		USB_Flush(CDC_TX);				// Send a tx frame if found
-		while (USB_Available(CDC_RX))	// Handle received bytes (if any)
+		if (USB_Available(CDC_RX))	// Handle received bytes (if any)
 			Serial.accept();
 #endif
 		
@@ -642,11 +642,11 @@ void USBDevice_::attach()
 	_usbConfiguration = 0;
 	UHWCON = 0x01;						// power internal reg
 	USBCON = (1<<USBE)|(1<<FRZCLK);		// clock frozen, usb enabled
-	#if F_CPU == 16000000UL	
-		PLLCSR = 0x12;						// Need 16 MHz xtal chchchchanges
-	#elif F_CPU == 8000000UL
-		PLLCSR = 0x02;						// Need 8 MHz xtal
-	#endif	
+#if F_CPU == 16000000UL
+	PLLCSR = 0x12;						// Need 16 MHz xtal
+#elif F_CPU == 8000000UL
+	PLLCSR = 0x02;						// Need 8 MHz xtal
+#endif
 	while (!(PLLCSR & (1<<PLOCK)))		// wait for lock pll
 		;
 
