@@ -1,7 +1,7 @@
 This folder contains support for our Aurduino-compatible designs:
 AnalogLEDFader
 UsbDmx
-Blinkyboard
+Blinkytape
 
 To add support for these boards to your Arduino IDE, simply
 copy this folder into your hardware directory in one of two
