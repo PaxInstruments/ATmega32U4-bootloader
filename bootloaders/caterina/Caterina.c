@@ -120,9 +120,19 @@ int main(void)
 
 	/* Watchdog may be configured with a 15 ms period so must disable it before going any further */
 	wdt_disable();
+
+#if DEVICE_PID == 0x606C   // Only on the BlinkyTape
+	// Put the user button (B6) in input_pullup mode, so we can read the button state
+	DDRB	&= ~(1<<DDB6);
+	PORTB	|= (1<<DDB6);
+#endif
 	
 	if (mcusr_state & (1<<EXTRF)) {
 		// External reset -  we should continue to self-programming mode.
+#if DEVICE_PID == 0x606C   // Only on the BlinkyTape
+	} else if (PINB & (1<<DDB6)) {
+		// User button held low- Jump into the bootloader, in case the application is borked.
+#endif
 	} else if ((mcusr_state & (1<<PORF)) && (pgm_read_word(0) != 0xFFFF)) {		
 		// After a power-on reset skip the bootloader and jump straight to sketch 
 		// if one exists.	
