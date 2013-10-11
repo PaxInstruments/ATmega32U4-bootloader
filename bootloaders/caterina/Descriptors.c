@@ -209,7 +209,7 @@ const USB_Descriptor_String_t ManufNameString =
 	.Header					= {.Size = USB_STRING_LEN(11), .Type = DTYPE_String},
 	
         #if DEVICE_VID == 0x1D50
-        .UnicodeString                  = L"BlinkyTape "
+        .UnicodeString                  = L"Blinkinlabs"
 	#else
 	.UnicodeString			= L"Unknown    "
 	#endif

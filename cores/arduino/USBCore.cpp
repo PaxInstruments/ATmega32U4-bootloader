@@ -65,7 +65,7 @@ const u16 STRING_IPRODUCT[17] = {
 const u16 STRING_IMANUFACTURER[12] = {
 	(3<<8) | (2+2*11),
 #if USB_VID == 0x1D50
-	'B','l','i','n','k','y','T','a','p','e',' '
+	'B','l','i','n','k','i','n','l','a','b','s'
 #else
 	'U','n','k','n','o','w','n',' ',' ',' ',' '
 #endif
