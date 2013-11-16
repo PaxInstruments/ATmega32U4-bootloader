@@ -57,7 +57,7 @@ BlinkyTape.bootloader.lock_bits=0x2F
 BlinkyTape.build.mcu=atmega32u4
 BlinkyTape.build.f_cpu=16000000L
 BlinkyTape.build.vid=0x1D50
-BlinkyTape.build.pid=0x606C
+BlinkyTape.build.pid=0x605E
 BlinkyTape.build.core=arduino
 BlinkyTape.build.variant=leonardo
 

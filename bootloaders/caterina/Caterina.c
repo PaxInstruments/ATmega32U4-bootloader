@@ -130,7 +130,7 @@ int main(void)
 	if (mcusr_state & (1<<EXTRF)) {
 		// External reset -  we should continue to self-programming mode.
 #if DEVICE_PID == 0x606C   // Only on the BlinkyTape
-	} else if (PINB & (1<<DDB6)) {
+	} else if (!(PINB & (1<<DDB6))) {
 		// User button held low- Jump into the bootloader, in case the application is borked.
 #endif
 	} else if ((mcusr_state & (1<<PORF)) && (pgm_read_word(0) != 0xFFFF)) {		

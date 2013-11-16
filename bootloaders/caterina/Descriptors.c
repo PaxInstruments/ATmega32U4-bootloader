@@ -193,12 +193,12 @@ const USB_Descriptor_String_t ProductString =
 {
 	.Header                 = {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
 
-       #if DEVICE_PID == 0x605E
+       #if DEVICE_PID == 0x606C
+       .UnicodeString                   = L"BlinkyTape      "
+       #elif DEVICE_PID == 0x605E
        .UnicodeString                   = L"Analog LED Fader"
        #elif DEVICE_PID == 0x6666
        .UnicodeString                   = L"USB DMX         "
-       #elif DEVICE_PID == 0x606C
-       .UnicodeString                   = L"BlinkyTape      "
        #else
        .UnicodeString                   = L"USB IO board    "
        #endif
