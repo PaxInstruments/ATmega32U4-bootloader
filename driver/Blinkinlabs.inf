@@ -1,11 +1,14 @@
-; Copyright 2012 Blacklabel Development, Inc.
+; Windows driver file for Blinkinlabs USB hardware
+; 
+; Based on the Arduino .inf driver
+; Original Copyright 2012 Blacklabel Development, Inc.
 
 [Strings]
 DriverPackageDisplayName="Blinkinlabs USB Driver"
 ManufacturerName="Blinkinlabs LLC (blinkinlabs.com)"
 ServiceName="USB RS-232 Emulation Driver"
 blinkytape.bootloader.name="BlinkyTape bootloader"
-blinkytape.interimsketch.name="BlinkyTape interim"
+blinkytape.sketch.name="BlinkyTape"
 
 [DefaultInstall]
 CopyINF=blinkinlabs.inf
@@ -16,7 +19,8 @@ ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
 Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
-DriverVer=01/01/2013,1.0.0.0
+CatalogFile=Blinkinlabs.cat
+DriverVer=11/27/2013,1.0.0.0
 
 [Manufacturer]
 %ManufacturerName%=DeviceList, NTamd64, NTia64
@@ -27,15 +31,18 @@ DefaultDestDir=12
 
 [DeviceList]
 %blinkytape.bootloader.name%=DriverInstall, USB\VID_1D50&PID_606C
-%blinkytape.interimsketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
+%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
+%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_6087&MI_00
 
 [DeviceList.NTamd64]
 %blinkytape.bootloader.name%=DriverInstall, USB\VID_1D50&PID_606C
-%blinkytape.interimsketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
+%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
+%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_6087&MI_00
 
 [DeviceList.NTia64]
 %blinkytape.bootloader.name%=DriverInstall, USB\VID_1D50&PID_606C
-%blinkytape.interimsketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
+%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
+%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_6087&MI_00
 
 [DriverInstall]
 include=mdmcpq.inf,usb.inf
