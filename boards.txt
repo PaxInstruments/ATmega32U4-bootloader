@@ -1,65 +1,30 @@
 ##############################################################
 
-AnalogLEDFader.name=Analog LED Fader
-AnalogLEDFader.upload.protocol=avr109
-AnalogLEDFader.upload.maximum_size=28672
-AnalogLEDFader.upload.speed=57600
-AnalogLEDFader.upload.disable_flushing=true
-AnalogLEDFader.bootloader.low_fuses=0xff
-AnalogLEDFader.bootloader.high_fuses=0xd8
-AnalogLEDFader.bootloader.extended_fuses=0xcb
-AnalogLEDFader.bootloader.path=caterina
-AnalogLEDFader.bootloader.file=Caterina-AnalogLEDFader.hex
-AnalogLEDFader.bootloader.unlock_bits=0x3F
-AnalogLEDFader.bootloader.lock_bits=0x2F
-AnalogLEDFader.build.mcu=atmega32u4
-AnalogLEDFader.build.f_cpu=16000000L
-AnalogLEDFader.build.vid=0x1D50
-AnalogLEDFader.build.pid=0x605E
-AnalogLEDFader.build.core=arduino
-AnalogLEDFader.build.variant=leonardo
+T400.name=Pax Instruments T400
+
+T400.upload.tool=avrdude
+T400.upload.protocol=avr109
+T400.upload.maximum_size=28672
+T400.upload.maximum_data_size=2560  # from LilyPad Arduino USB
+T400.upload.speed=57600
+T400.upload.disable_flushing=true
+T400.upload.use_1200bps_touch=true  # from LilyPad Arduino USB
+T400.upload.wait_for_upload_port=true  # from LilyPad Arduino USB
+
+T400.bootloader.tool=avrdude  # from LilyPad Arduino USB
+T400.bootloader.low_fuses=0xff
+T400.bootloader.high_fuses=0xd8
+T400.bootloader.extended_fuses=0xcb  # LilyPad Arduino USB uses 0xce
+T400.bootloader.path=caterina
+T400.bootloader.file=Caterina-T400.hex
+T400.bootloader.unlock_bits=0x3F
+T400.bootloader.lock_bits=0x2F
+
+T400.build.mcu=atmega32u4
+T400.build.f_cpu=8000000L
+T400.build.vid=0x1D50  # put the Pax Instruments VID here
+T400.build.pid=0x605E  # put the T400 PID here
+T400.build.core=arduino
+T400.build.variant=leonardo
 
 ##############################################################
-
-USBDMX.name=USB DMX converter
-USBDMX.upload.protocol=avr109
-USBDMX.upload.maximum_size=28672
-USBDMX.upload.speed=57600
-USBDMX.upload.disable_flushing=true
-USBDMX.bootloader.low_fuses=0xff
-USBDMX.bootloader.high_fuses=0xd8
-USBDMX.bootloader.extended_fuses=0xcb
-USBDMX.bootloader.path=caterina
-USBDMX.bootloader.file=Caterina-USBDMX.hex
-USBDMX.bootloader.unlock_bits=0x3F
-USBDMX.bootloader.lock_bits=0x2F
-USBDMX.build.mcu=atmega32u4
-USBDMX.build.f_cpu=16000000L
-USBDMX.build.vid=0x1D50
-USBDMX.build.pid=0x6666
-USBDMX.build.core=arduino
-USBDMX.build.variant=leonardo
-
-##############################################################
-
-BlinkyTape.name=BlinkyTape
-BlinkyTape.upload.protocol=avr109
-BlinkyTape.upload.maximum_size=28672
-BlinkyTape.upload.speed=57600
-BlinkyTape.upload.disable_flushing=true
-BlinkyTape.bootloader.low_fuses=0xff
-BlinkyTape.bootloader.high_fuses=0xd8
-BlinkyTape.bootloader.extended_fuses=0xcb
-BlinkyTape.bootloader.path=caterina
-BlinkyTape.bootloader.file=Caterina-BlinkyTape.hex
-BlinkyTape.bootloader.unlock_bits=0x3F
-BlinkyTape.bootloader.lock_bits=0x2F
-BlinkyTape.build.mcu=atmega32u4
-BlinkyTape.build.f_cpu=16000000L
-BlinkyTape.build.vid=0x1D50
-BlinkyTape.build.pid=0x605E
-BlinkyTape.build.core=arduino
-BlinkyTape.build.variant=leonardo
-
-##############################################################
-
