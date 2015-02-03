@@ -1,11 +1,11 @@
 This is the stock Caterina bootloader (from Arduino 1.0.5)
 
 Changes from the stock bootloader:
-* All targets: Manufacturer changed to 'BlinkyTape'
+* All targets: Manufacturer changed to ‘Pax Instruments’
 * All targets: Default Lock bits are 0x2F
-* BlinkyTape: VID/PID changed to match BlinkyTape VID/PID from OpenMoko project.
-* BlinkyTape: Product name changed to 'BlinkyTape'
-* BlinkyTape: Status and RX/TX LEDs disabled, since they are not present in hardware.
+* T400: VID/PID changed to match Pax Instruments T400 VID/PID
+* T400: Product name changed to ‘T400’
+* T400: Status and RX/TX LEDs disabled, since they are not present in hardware.
 
 Notes on building the Caterina bootloader:
 

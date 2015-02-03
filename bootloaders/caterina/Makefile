@@ -48,17 +48,15 @@
 
 # USB vendor ID (VID)
 # reuse of this VID by others is forbidden by USB-IF
-# official Arduino LLC VID
-# VID = 0x2341
+# official Pax Instruments VID
+# VID = 0x2B51
 
 
 # USB product ID (PID)
-# official Leonardo PID
+# Pax Instruments T400 PID
 # PID = 0x0036
-# official Micro PID
+# Pax Instruments T400D PID
 # PID = 0x0037
-# official Esplora PID
-# PID = 0x003C
 
 # MCU name
 MCU = atmega32u4
@@ -85,7 +83,7 @@ BOARD = USER
 #     does not *change* the processor frequency - it should merely be updated to
 #     reflect the processor speed set externally so that the code can use accurate
 #     software delays.
-F_CPU = 16000000
+F_CPU = 8000000
 
 
 # Input clock frequency.

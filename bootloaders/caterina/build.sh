@@ -1,12 +1,7 @@
 #!/bin/bash
 make clean
-make VID=0x1D50 PID=0x605E F_CPU=16000000
-mv Caterina.hex Caterina-AnalogLEDFader.hex
+make VID=0x2B51 PID=0x1000 F_CPU=16000000
+mv Caterina.hex Caterina-t400.hex
 
-make clean
-make VID=0x1D50 PID=0x6666 F_CPU=16000000
-mv Caterina.hex Caterina-USBDMX.hex
-
-make clean
-make VID=0x1D50 PID=0x606C F_CPU=16000000
-mv Caterina.hex Caterina-BlinkyTape.hex
+make VID=0x2B51 PID=0x1001 F_CPU=16000000
+mv Caterina.hex Caterina-t400d.hex

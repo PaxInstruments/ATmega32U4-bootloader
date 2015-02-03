@@ -22,8 +22,8 @@ T400.bootloader.lock_bits=0x2F
 
 T400.build.mcu=atmega32u4
 T400.build.f_cpu=8000000L
-T400.build.vid=0x1D50  # put the Pax Instruments VID here
-T400.build.pid=0x605E  # put the T400 PID here
+T400.build.vid=0x2B51  # the Pax Instruments VID
+T400.build.pid=0x1000  # the T400 PID
 T400.build.core=arduino
 T400.build.variant=leonardo
 
