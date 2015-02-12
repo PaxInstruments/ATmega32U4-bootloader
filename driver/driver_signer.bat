@@ -18,4 +18,4 @@ set toolpath="C:\Program Files (x86)\Windows Kits\8.1\bin\x86\"
 %toolpath%signtool sign /v /ac "GlobalSign Root CA.crt" /n "Blinkinlabs, LLC" /tr http://tsa.starfieldtech.com *.cat
 
 :: Finally, verify that the file was created and signed correctly.
-%toolpath%signtool verify /v /pa Blinkinlabs.cat
+%toolpath%signtool verify /v /pa T400.cat

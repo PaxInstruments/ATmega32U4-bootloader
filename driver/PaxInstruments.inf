@@ -1,17 +1,17 @@
-; Windows driver file for Blinkinlabs USB hardware
+; Windows driver file for Pax Instruments USB hardware
 ; 
 ; Based on the Arduino .inf driver
 ; Original Copyright 2012 Blacklabel Development, Inc.
 
 [Strings]
-DriverPackageDisplayName="Blinkinlabs USB Driver"
-ManufacturerName="Blinkinlabs LLC (blinkinlabs.com)"
+DriverPackageDisplayName="Pax Instruements USB Driver"
+ManufacturerName="Pax Instruments"
 ServiceName="USB RS-232 Emulation Driver"
-blinkytape.bootloader.name="BlinkyTape bootloader"
-blinkytape.sketch.name="BlinkyTape"
+T400.bootloader.name="T400 bootloader"
+T400.sketch.name="T400"
 
 [DefaultInstall]
-CopyINF=blinkinlabs.inf
+CopyINF=T400.inf
 
 [Version]
 Class=Ports
@@ -19,7 +19,7 @@ ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
 Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
-CatalogFile=Blinkinlabs.cat
+CatalogFile=T400.cat
 DriverVer=11/27/2013,1.0.0.0
 
 [Manufacturer]
@@ -30,19 +30,16 @@ FakeModemCopyFileSection=12
 DefaultDestDir=12
 
 [DeviceList]
-%blinkytape.bootloader.name%=DriverInstall, USB\VID_1D50&PID_606C
-%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
-%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_6087&MI_00
+%T400.bootloader.name%=DriverInstall, USB\VID_2B51&PID_1000
+%T400.sketch.name%=DriverInstall, USB\VID_2B51&PID_1005&MI_00
 
 [DeviceList.NTamd64]
-%blinkytape.bootloader.name%=DriverInstall, USB\VID_1D50&PID_606C
-%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
-%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_6087&MI_00
+%T400.bootloader.name%=DriverInstall, USB\VID_2B51&PID_1000
+%T400.sketch.name%=DriverInstall, USB\VID_2B51&PID_1005&MI_00
 
 [DeviceList.NTia64]
-%blinkytape.bootloader.name%=DriverInstall, USB\VID_1D50&PID_606C
-%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_605E&MI_00
-%blinkytape.sketch.name%=DriverInstall, USB\VID_1D50&PID_6087&MI_00
+%T400.bootloader.name%=DriverInstall, USB\VID_2B51&PID_1000
+%T400.sketch.name%=DriverInstall, USB\VID_2B51&PID_1005&MI_00
 
 [DriverInstall]
 include=mdmcpq.inf,usb.inf

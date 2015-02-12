@@ -50,7 +50,7 @@ const u16 STRING_LANGUAGE[2] = {
 };
 
 const u16 STRING_IPRODUCT[16] = {
-	(3<<8) | (2+2*16),
+	(3<<8) | (2+2*15),
 #if USB_PID == 0x1005
         'T','4','0','0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '
 #else
@@ -59,7 +59,7 @@ const u16 STRING_IPRODUCT[16] = {
 };
 
 const u16 STRING_IMANUFACTURER[16] = {
-	(3<<8) | (2+2*11),
+	(3<<8) | (2+2*15),
 #if USB_VID == 0x2B51
 	'P','a','x',' ','I','n','s','t','r','u','m','e','n','t','s'
 #else
