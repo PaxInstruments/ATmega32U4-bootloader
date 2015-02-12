@@ -1,30 +1,30 @@
 ##############################################################
 
-T400.name=Pax Instruments T400  // This is the name that will appear in the IDE
+T400.name=Pax Instruments T400
 
 T400.upload.tool=avrdude
-T400.upload.protocol=avr109  // The upload protocol is what AVRDUDE will use to program when click upload
-T400.upload.maximum_size=28672  // This is how much space is left in flash after the bootloader
-T400.upload.maximum_data_size=2560  # from LilyPad Arduino USB
-T400.upload.speed=57600  // The serial upload speed. This is set in your bootloader
+T400.upload.protocol=avr109
+T400.upload.maximum_size=28672
+T400.upload.maximum_data_size=2560
+T400.upload.speed=57600
 T400.upload.disable_flushing=true
-T400.upload.use_1200bps_touch=true  # from LilyPad Arduino USB
-T400.upload.wait_for_upload_port=true  # from LilyPad Arduino USB
+T400.upload.use_1200bps_touch=true
+T400.upload.wait_for_upload_port=true
 
-T400.bootloader.tool=avrdude  # from LilyPad Arduino USB
-T400.bootloader.low_fuses=0xff  // The fuses are determined by how the AVR is configured....
-T400.bootloader.high_fuses=0xd8  // Use a fuse calculator or the datasheet. Obviously, these must actually be programmed in your chip already.
-T400.bootloader.extended_fuses=0xcb  // Here is a fuse calculator: http://www.engbedded.com/fusecalc
-T400.bootloader.path=caterina  // This is location of the bootloader in the Arduino/Hardware/Bootloader folder
-T400.bootloader.file=Caterina-T400.hex  // This is the actual file in that folder used for the bootloader
-T400.bootloader.unlock_bits=0x3F  // See the datasheet for the unlock and lock bits
+T400.bootloader.tool=avrdude
+T400.bootloader.low_fuses=0xff
+T400.bootloader.high_fuses=0xd8
+T400.bootloader.extended_fuses=0xcb
+T400.bootloader.path=caterina
+T400.bootloader.file=Caterina-T400.hex
+T400.bootloader.unlock_bits=0x3F
 T400.bootloader.lock_bits=0x2F
 
-T400.build.mcu=atmega32u4  // This is the mcu = parameter used by AVRDUDE. It must match a valid name used by AVRDUDE
-T400.build.f_cpu=8000000L  // The speed of your clock. Obviously the part must actually be programmed (using the fuses and bootloader) for this clock
-T400.build.vid=0x2B51  # the Pax Instruments VID
-T400.build.pid=0x1000  # the T400 PID
-T400.build.core=arduino  // This tells the IDE which core to use. These are located in the arduino/hardware/arduino/cores folder.
-T400.build.variant=leonardo  // This is the "variant" that will be used. It points to a folder in the arduino/hardware/arduino/variants folder
+T400.build.mcu=atmega32u4
+T400.build.f_cpu=8000000L
+T400.build.vid=0x2B51
+T400.build.pid=0x1005
+T400.build.core=arduino
+T400.build.variant=T400
 
 ##############################################################
