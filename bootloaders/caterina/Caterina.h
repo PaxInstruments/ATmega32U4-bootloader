@@ -66,7 +66,7 @@
 		
 		#define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
-		#if DEVICE_PID == 0x606C   // No status LEDs on the BlinkyTape
+		#if DEVICE_PID == 0x1000   // No status LEDs on the T400 
 			#define LED_SETUP()
 			#define L_LED_OFF()
 			#define L_LED_ON()

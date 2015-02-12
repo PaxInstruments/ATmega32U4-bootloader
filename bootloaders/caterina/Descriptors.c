@@ -193,25 +193,23 @@ const USB_Descriptor_String_t ProductString =
 {
 	.Header                 = {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
 
-       #if DEVICE_PID == 0x606C
-       .UnicodeString                   = L"BlinkyTape      "
-       #elif DEVICE_PID == 0x605E
-       .UnicodeString                   = L"Analog LED Fader"
-       #elif DEVICE_PID == 0x6666
-       .UnicodeString                   = L"USB DMX         "
+       #if DEVICE_PID == 0x1000
+       .UnicodeString                   = L"T400 Bootloader "
+       #elif DEVICE_PID == 0x1001
+       .UnicodeString                   = L"T400d Bootloader"
        #else
-       .UnicodeString                   = L"USB IO board    "
+       .UnicodeString                   = L"Unknown        "
        #endif
 };
 
 const USB_Descriptor_String_t ManufNameString = 
 {
-	.Header					= {.Size = USB_STRING_LEN(11), .Type = DTYPE_String},
+	.Header					= {.Size = USB_STRING_LEN(15), .Type = DTYPE_String},
 	
-        #if DEVICE_VID == 0x1D50
-        .UnicodeString                  = L"Blinkinlabs"
+        #if DEVICE_VID == 0x2B51
+        .UnicodeString                  = L"Pax Instruments"
 	#else
-	.UnicodeString			= L"Unknown    "
+	.UnicodeString			= L"Unknown        "
 	#endif
 };
 

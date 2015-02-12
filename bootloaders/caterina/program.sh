@@ -7,15 +7,12 @@ then
   exit 1
 fi
 
-if [ $1 = 'AnalogLEDFader' ]
+if [ $1 = 't400' ]
 then
-  BOOTLOADER_FILE=Caterina-AnalogLEDFader.hex
-elif [ $1 = 'USBDMX' ]
+  BOOTLOADER_FILE=Caterina-t400.hex
+elif [ $1 = 't400d' ]
 then
-  BOOTLOADER_FILE=Caterina-USBDMX.hex
-elif [ $1 = 'BlinkyTape' ]
-then
-  BOOTLOADER_FILE=Caterina-BlinkyTape.hex
+  BOOTLOADER_FILE=Caterina-t400d.hex
 else
   echo 'Target' ${1} 'not recognized'
   exit 1

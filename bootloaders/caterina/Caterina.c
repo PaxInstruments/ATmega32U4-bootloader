@@ -121,17 +121,21 @@ int main(void)
 	/* Watchdog may be configured with a 15 ms period so must disable it before going any further */
 	wdt_disable();
 
-#if DEVICE_PID == 0x606C   // Only on the BlinkyTape
-	// Put the user button (B6) in input_pullup mode, so we can read the button state
-	DDRB	&= ~(1<<DDB6);
-	PORTB	|= (1<<DDB6);
+#if DEVICE_PID == 0x1000 // Only on the T400
+        // Turn on the output power so we don't have to hold the button down
+        // Disabled until reset circuitry is improved
+//        DDRF    |= _BV(DDF0);
+//        PORTF   |= _BV(PORTF0);
+
+	// Put the user buttons A (PD3) and B (PD2) in input mode, so we can read the button state
+	DDRD	&= ~(_BV(DDD2) | _BV(DDD3));
 #endif
 	
 	if (mcusr_state & (1<<EXTRF)) {
 		// External reset -  we should continue to self-programming mode.
-#if DEVICE_PID == 0x606C   // Only on the BlinkyTape
-	} else if (!(PINB & (1<<DDB6))) {
-		// User button held low- Jump into the bootloader, in case the application is borked.
+#if DEVICE_PID == 0x1000   // Only on the T400
+	} else if ((PIND & (_BV(PIND2) | _BV(PIND3))) == 0) {
+		// User buttons A and B held low- stay in bootloader mode
 #endif
 	} else if ((mcusr_state & (1<<PORF)) && (pgm_read_word(0) != 0xFFFF)) {		
 		// After a power-on reset skip the bootloader and jump straight to sketch 
