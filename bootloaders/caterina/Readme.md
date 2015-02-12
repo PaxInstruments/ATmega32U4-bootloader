@@ -43,14 +43,14 @@ Alternatively, firmware for a single device could be built by calling Make and s
 	
 ## Programming the bootloader
 
-First, connect the usbtiny ISP to the computer, and to the t400/t400d. Target power can be supplied through the ISP.
+First, connect the usbtiny ISP to the computer, and to the T400/T400D. Target power can be supplied through the ISP.
 
 Hold down the power button on the device.
 
-Use ./program.sh to program the device. For the t400:
+Use ./program.sh to program the device. For the T400:
 
-	./program.sh t400
+	./program.sh T400
 	
-And for the t400d:
+And for the T400D:
 
-	./program.sh t400d
+	./program.sh T400D

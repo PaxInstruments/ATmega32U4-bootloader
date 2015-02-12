@@ -7,12 +7,12 @@ then
   exit 1
 fi
 
-if [ $1 = 't400' ]
+if [ $1 = 'T400' ]
 then
-  BOOTLOADER_FILE=Caterina-t400.hex
-elif [ $1 = 't400d' ]
+  BOOTLOADER_FILE=Caterina-T400.hex
+elif [ $1 = 'T400d' ]
 then
-  BOOTLOADER_FILE=Caterina-t400d.hex
+  BOOTLOADER_FILE=Caterina-T400d.hex
 else
   echo 'Target' ${1} 'not recognized'
   exit 1
