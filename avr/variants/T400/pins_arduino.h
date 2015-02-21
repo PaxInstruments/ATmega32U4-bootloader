@@ -93,19 +93,12 @@
 #define NUM_DIGITAL_PINS  30
 #define NUM_ANALOG_INPUTS 12
 
-//#define TX_RX_LED_INIT	DDRD |= (1<<5), DDRB |= (1<<0)
-//#define TXLED0			PORTD |= (1<<5)
-//#define TXLED1			PORTD &= ~(1<<5)
-//#define RXLED0			PORTB |= (1<<0)
-//#define RXLED1			PORTB &= ~(1<<0)
-
 // T400 doesn't have RX or TX lights...
 #define TX_RX_LED_INIT
 #define TXLED0
 #define TXLED1
 #define RXLED0
 #define RXLED1
-
 
 static const uint8_t SDA = 2;
 static const uint8_t SCL = 3;
@@ -139,6 +132,8 @@ static const uint8_t A11 = 29;	// D12
 //	__AVR_ATmega32U4__ has an unusual mapping of pins to channels
 extern const uint8_t PROGMEM analog_pin_to_channel_PGM[];
 #define analogPinToChannel(P)  ( pgm_read_byte( analog_pin_to_channel_PGM + (P) ) )
+
+#define digitalPinToInterrupt(p) ((p) == 0 ? 2 : ((p) == 1 ? 3 : ((p) == 2 ? 1 : ((p) == 3 ? 0 : ((p) == 7 ? 4 : NOT_AN_INTERRUPT)))))
 
 #ifdef ARDUINO_MAIN
 
@@ -340,6 +335,26 @@ const uint8_t PROGMEM analog_pin_to_channel_PGM[] = {
 	13,	// A10		D10		PB6					ADC13
 	9	// A11		D12		PD6					ADC9
 };
+
+// These serial port names are intended to allow libraries and architecture-neutral
+// sketches to automatically default to the correct port name for a particular type
+// of use.  For example, a GPS module would normally connect to SERIAL_PORT_HARDWARE_OPEN,
+// the first hardware serial port whose RX/TX pins are not dedicated to another use.
+//
+// SERIAL_PORT_MONITOR        Port which normally prints to the Arduino Serial Monitor
+//
+// SERIAL_PORT_USBVIRTUAL     Port which is USB virtual serial
+//
+// SERIAL_PORT_LINUXBRIDGE    Port which connects to a Linux system via Bridge library
+//
+// SERIAL_PORT_HARDWARE       Hardware serial port, physical RX & TX pins.
+//
+// SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
+//                            pins are NOT connected to anything by default.
+#define SERIAL_PORT_MONITOR        Serial
+#define SERIAL_PORT_USBVIRTUAL     Serial
+#define SERIAL_PORT_HARDWARE       Serial1
+#define SERIAL_PORT_HARDWARE_OPEN  Serial1
 
 #endif /* ARDUINO_MAIN */
 #endif /* Pins_Arduino_h */
