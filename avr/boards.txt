@@ -26,7 +26,7 @@ T400.build.pid=0x1005
 T400.build.usb_product="T400"
 T400.build.usb_manufacturer="Pax Instruments"
 T400.build.board=AVR_T400
-T400.build.core=arduino
+T400.build.core=arduino:arduino
 T400.build.variant=T400
 T400.build.extra_flags={build.usb_flags}
 
