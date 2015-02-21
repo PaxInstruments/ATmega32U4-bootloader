@@ -2,7 +2,7 @@
 
 T400.name=Pax Instruments T400
 
-T400.upload.tool=avrdude
+T400.upload.tool=arduino:avrdude
 T400.upload.protocol=avr109
 T400.upload.maximum_size=28672
 T400.upload.maximum_data_size=2560
@@ -11,12 +11,11 @@ T400.upload.disable_flushing=true
 T400.upload.use_1200bps_touch=true
 T400.upload.wait_for_upload_port=true
 
-T400.bootloader.tool=avrdude
+T400.bootloader.tool=arduino:avrdude
 T400.bootloader.low_fuses=0xff
 T400.bootloader.high_fuses=0xd8
 T400.bootloader.extended_fuses=0xcb
-T400.bootloader.path=caterina
-T400.bootloader.file=Caterina-T400.hex
+T400.bootloader.file=caterina/Caterina-T400.hex
 T400.bootloader.unlock_bits=0x3F
 T400.bootloader.lock_bits=0x2F
 
@@ -24,7 +23,16 @@ T400.build.mcu=atmega32u4
 T400.build.f_cpu=8000000L
 T400.build.vid=0x2B51
 T400.build.pid=0x1005
+T400.build.usb_product="T400"
+T400.build.usb_manufacturer="Pax Instruments"
+T400.build.board=AVR_T400
 T400.build.core=arduino
 T400.build.variant=T400
+T400.build.extra_flags={build.usb_flags}
+
+T400.vid.0=0x2B51
+T400.pid.0=0x1005
+T400.vid.1=0x2B51
+T400.pid.1=0x1000
 
 ##############################################################

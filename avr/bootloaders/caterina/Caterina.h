@@ -67,6 +67,7 @@
 		#define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
 		#if DEVICE_PID == 0x1000   // No status LEDs on the T400 
+    #error
 			#define LED_SETUP()
 			#define L_LED_OFF()
 			#define L_LED_ON()
