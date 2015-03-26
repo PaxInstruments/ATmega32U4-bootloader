@@ -7,12 +7,9 @@ The `ATmega32U4-bootloader` repository contains support for the following Arduin
 
 ## Installation
 To add support for these boards to your Arduino IDE, simply
-copy this folder into your hardware directory in one of two
-places:
+copy this folder into the directory labeled 'hardware' inside your Sketchbook directory. If the hardware directory doesn't exist, create it first, and then copy this folder there.
 
-- inside your Sketchbook directory
-
-__Note: this will only work under Arduino IDE versions 1.0.1
+__Note: this will only work under Arduino IDE versions 1.6.0
 or later.__
 
 Information on compiling and programming the bootloader can be found in the bootloader directory.
