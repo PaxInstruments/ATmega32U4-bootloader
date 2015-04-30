@@ -122,10 +122,10 @@ int main(void)
 	wdt_disable();
 
 #if DEVICE_PID == 0x1000 // Only on the T400
-        // Turn on the output power so we don't have to hold the button down
-        // Disabled until reset circuitry is improved
-        DDRF    |= _BV(DDF0);
-        PORTF   &= ~(_BV(PORTF0));
+        // Set the PWR_ONOFF pin to a low output now, so that it is at a known value.
+        // PWR_ONOFF pin is PB7 in Rev 12
+        PORTF   &= ~(_BV(PORTB7));
+        DDRB    |= _BV(DDB7);
 
 	// Put the user buttons A (PD3) and B (PD2) in input mode, so we can read the button state
 	DDRD	&= ~(_BV(DDD2) | _BV(DDD3));
