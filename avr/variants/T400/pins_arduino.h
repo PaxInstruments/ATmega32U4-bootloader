@@ -173,7 +173,9 @@ extern const uint8_t PROGMEM analog_pin_to_channel_PGM[];
 // MOSI		D16		PB2					MOSI,PCINT2
 // SS		D17		PB0					RXLED,SS/PCINT0
 //
-// TXLED			PD5
+
+// Tack TXLED on at the end of the digital inputs.
+// TXLED	D30		PD5
 // RXLED		    PB0
 // HWB				PE2					HWB
 
@@ -245,6 +247,8 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PB, // D27 / D9 - A9 - PB5
 	PB, // D28 / D10 - A10 - PB6
 	PD, // D29 / D12 - A11 - PD6
+
+        PD, // D30 - PD5 - TXLED
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
@@ -282,6 +286,8 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV(5), // D27 / D9 - A9 - PB5
 	_BV(6), // D28 / D10 - A10 - PB6
 	_BV(6), // D29 / D12 - A11 - PD6
+
+        _BV(5), // D30 - PD5 - TXLED
 };
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
@@ -318,6 +324,8 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
+	NOT_ON_TIMER,
+
 	NOT_ON_TIMER,
 };
 
