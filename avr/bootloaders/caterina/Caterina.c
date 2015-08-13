@@ -127,14 +127,14 @@ int main(void)
         PORTD   &= ~(_BV(PORTD5));
         DDRD    |= _BV(DDB5);
 
-	// Put the user buttons A (PD3) and B (PD2) in input mode, so we can read the button state
-	DDRD	&= ~(_BV(DDD2) | _BV(DDD3));
+	// Put the user buttons D (PB5) and E (PB6) in input mode, so we can read the button state
+	DDRB	&= ~(_BV(DDB5) | _BV(DDB6));
 #endif
 	
 	if (mcusr_state & (1<<EXTRF)) {
 		// External reset -  we should continue to self-programming mode.
 #if DEVICE_PID == 0x1000   // Only on the T400
-	} else if ((PIND & (_BV(PIND2) | _BV(PIND3))) == 0) {
+	} else if ((PINB & (_BV(PINB5) | _BV(PINB6))) == 0) {
 		// User buttons A and B held low- stay in bootloader mode
 #endif
 	} else if ((mcusr_state & (1<<PORF)) && (pgm_read_word(0) != 0xFFFF)) {		
