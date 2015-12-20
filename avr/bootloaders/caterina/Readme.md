@@ -7,7 +7,7 @@
 *  T400: Product name changed to ‘T400 Bootloader’
 *  T400: Status and RX/TX LEDs disabled, since they are not present in hardware.
 *  T400: Board power enabled at bootloader start
-*  T400: Holding down A+B buttons at poweron puts the board into firmware recovery mode
+*  T400: Holding down D+E buttons at poweron puts the board into firmware recovery mode
 
 
 ## Building the Caterina bootloader

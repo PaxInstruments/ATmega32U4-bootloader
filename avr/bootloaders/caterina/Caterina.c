@@ -135,7 +135,7 @@ int main(void)
 		// External reset -  we should continue to self-programming mode.
 #if DEVICE_PID == 0x1000   // Only on the T400
 	} else if ((PINB & (_BV(PINB5) | _BV(PINB6))) == 0) {
-		// User buttons A and B held low- stay in bootloader mode
+		// User buttons D (PB5) and E (PB6) held low- stay in bootloader mode
 #endif
 	} else if ((mcusr_state & (1<<PORF)) && (pgm_read_word(0) != 0xFFFF)) {		
 		// After a power-on reset skip the bootloader and jump straight to sketch 
