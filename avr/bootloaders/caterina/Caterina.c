@@ -129,6 +129,8 @@ int main(void)
 
 	// Put the user buttons D (PB5) and E (PB6) in input mode, so we can read the button state
 	DDRB	&= ~(_BV(DDB5) | _BV(DDB6));
+    // Enable pullup resistors on user buttons D (PB5) and E (PB6)
+    PORTB |= _BV(PORTB5) | _BV(PORTB6);
 #endif
 	
 	if (mcusr_state & (1<<EXTRF)) {
